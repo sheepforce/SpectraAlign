@@ -1,0 +1,2 @@
+3 ! optcriterion -> 1 = divergence of all points, 2 = align lower boundary, 3 = align upper boundary, 4 = align mean of lowe and upper
+2 ! combinationtype -> 1 = use shifting linear combination, 2 = use constant linear combination
