@@ -1,7 +1,14 @@
+# the installation prefix where it will be installed
+PREFIX		= ~/.local/bin
+
 FC		= gfortran
+
 FFLAGS		=  -O2
 FFLAGS		+= -fopenmp
 FFLAGS		+= -Wall
+
+
+.PHONY: spectraaligner
 
 modules: 
 	$(FC) -c spectra.f95 grid_functions.f95
@@ -11,3 +18,6 @@ spectraaligner: modules
 
 clean:
 	rm -f *.mod *.o *.exe
+
+install:
+	cp spectraaligner.exe $(PREFIX)/spectraaligner
