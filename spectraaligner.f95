@@ -141,7 +141,7 @@ program spectraaligner
   deallocate(spectrumhigh, spectrumlow, scalingtable)
   
   do line = 1, points_in_spectrumcombined
-    !write(*, *) spectrumcombined(line,:)
+    write(*, *) spectrumcombined(line,:)
   end do
   
   

@@ -10,11 +10,11 @@ FFLAGS		+= -Wall
 
 .PHONY: spectraaligner
 
-modules: 
-	$(FC) -c spectra.f95 grid_functions.f95
-
 spectraaligner: modules
 	$(FC) spectraaligner.f95 spectra.o grid_functions.o -o spectraaligner.exe
+
+modules: 
+	$(FC) -c spectra.f95 grid_functions.f95
 
 clean:
 	rm -f *.mod *.o *.exe
